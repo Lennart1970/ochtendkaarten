@@ -1,0 +1,82 @@
+:root {
+  --ink: #1a1a1a;
+  --muted: #4a4a4a;
+  --line: #9a9a9a;
+  --bg: #f7f5f2;
+  --frame: #e8e4df;
+  --space: 1.25rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  padding: var(--space);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+main {
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0 0 1.75rem;
+  font-size: clamp(1.5rem, 5vw, 1.85rem);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.step {
+  margin: 0;
+}
+
+.caption {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.caption strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.slot {
+  display: block;
+  width: 100%;
+  min-height: 10rem;
+  border: 2px dashed var(--line);
+  border-radius: 0.5rem;
+  background: var(--frame);
+}
+
+@media (min-width: 40rem) {
+  body {
+    padding: 2rem;
+  }
+
+  .slot {
+    min-height: 12rem;
+  }
+}
